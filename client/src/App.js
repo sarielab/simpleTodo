@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import logo from './logo.svg'
 import 'bulma/css/bulma.css'
 
 import {
   Footer,
-  Board,
+  BoardContainer,
   CreateTodo
 } from './design'
 
@@ -24,18 +23,13 @@ class App extends Component {
                 modal.classList.add('is-active')
               }}
             >Add New</button>
-            <div className="columns">
-              <Board name="Backlog"/>
-              <Board name="Todo"/>
-              <Board name="Doing"/>
-              <Board name="Done"/>
-            </div>
+            <BoardContainer />
           </div>
         </section>
         <Footer />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

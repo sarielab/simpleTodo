@@ -4,38 +4,20 @@ import {
   Card
 } from '../../'
 
-const Board = (props) => (
+const Board = (props) => {
+  console.log(Card)
+  console.log(props.cards[0])
+  return (
   <div className="column">
     {props.name}
-    <Card
-      status="Backlog"
-      title="title"
-      descr="description"
-      poin="10"
-      assignedTo="Bendit"
-    />
-    <Card
-      status="Doing"
-      title="title"
-      descr="description"
-      poin="15"
-      assignedTo="Lycaa"
-    />
-    <Card
-      status="Todo"
-      title="title"
-      descr="description"
-      poin="5"
-      assignedTo="Miko"
-    />
-    <Card
-      status="Done"
-      title="title"
-      descr="description"
-      poin="19"
-      assignedTo="Meyer"
-    />
+    {typeof props.cards !=='undefined' &&
+      props.cards.map((card,i) => (
+        <Card
+          data={card}
+          key={i} />)
+      )
+    }
   </div>
-)
+)}
 
 export default Board
