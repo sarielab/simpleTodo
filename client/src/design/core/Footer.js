@@ -1,11 +1,11 @@
 import React from 'react'
 
 const Footer = () => (
-  <footer className="footer">
+  <footer className="footer" style={{backgroundColor: 'rgb(56, 52, 52)'}}>
     <div className="container">
       <div className="content has-text-centered">
-        <p>
-          <strong>Bulma</strong> by <a href="https://www.linkedin.com/in/ppsari">sarielab</a>. The source code is licensed by
+        <p style={{color:'white'}}>
+          <strong className='is-uppercase' style={{color:'rgb(69, 108, 59)'}}>Simple Todo</strong> by <a href="https://www.linkedin.com/in/ppsari">sarielab</a>. The source code is licensed by
           <a href="http://opensource.org/licenses/mit-license.php"> MIT</a>.
         </p>
         <p>

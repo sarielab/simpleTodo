@@ -11,7 +11,7 @@ class CreateTodo extends Component {
         <div className="modal-background"></div>
         <div className="modal-card">
           <header className="modal-card-head">
-            <p className="modal-card-title">Add New Todo</p>
+            <p className="modal-card-title is-uppercase">Add New Todo</p>
             <button className="delete" aria-label="close"
               onClick = {() => {
                 let modal = document.getElementById('modalTodo')
