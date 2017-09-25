@@ -34,7 +34,7 @@ const BoardActions = {
 const Card = (props) => {
   if (typeof props.data !== 'undefined') {
 
-    const { title, descr, poin, PIC, status, key } = props.data
+    const { title, descr, poin, PIC, status, key, _id } = props.data
     return (
       <div className="card" style={styles.card} key={key}>
         <header className="card-header" style={styles['card-header']}>
@@ -55,7 +55,8 @@ const Card = (props) => {
             BoardActions[status].map( (act,i) => (<a href="#"
                 className="card-footer-item"
                 key={i}
-                style={{color:'white', backgroundColor:styles['card-status-background'][act]}}>{act}</a>))
+                style={{color:'white', backgroundColor:styles['card-status-background'][act]}}
+                onClick={() => props.changeStatus(act, status ,_id)}>{act}</a>))
           }
           <a href="#"
             className="card-footer-item"

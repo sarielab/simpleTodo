@@ -35,14 +35,14 @@ class App extends Component {
           <h2 className="subtitle">Learning to make basic todolist with react-redux</h2>
         </header>
         <section className="section" style={styles.section}>
+          <button className="button" style={styles['btn-add-new']}
+            onClick = {() => {
+              let modal = document.getElementById('modalTodo')
+              modal.classList.add('is-active')
+            }}
+          >Add New</button>
           <CreateTodo/>
           <div className="container">
-            <button className="button right-align" style={styles['btn-add-new']}
-              onClick = {() => {
-                let modal = document.getElementById('modalTodo')
-                modal.classList.add('is-active')
-              }}
-            >Add New</button>
             <BoardContainer />
           </div>
         </section>

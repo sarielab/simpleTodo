@@ -1,9 +1,11 @@
 import {
   fetchTodos,
-  saveTodo
+  saveTodo,
+  updateTodo
 } from './todoActions'
 
 export {
   fetchTodos,
-  saveTodo
+  saveTodo,
+  updateTodo
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+
 import {Card} from '../../'
 
 const styles = {
@@ -30,7 +31,15 @@ const Board = (props) => {
   return (
     <div className="column is-centered" style={styles['board-lane']}>
       <p style={ boardStyles }>{props.name}</p>
-      { typeof props.cards !== 'undefined' && props.cards.map((card, i) => (<Card data={card} key={i}/>)) }
+      {
+        typeof props.cards !== 'undefined' &&
+        props.cards.map((card, i) => (
+          <Card
+          data={card}
+          changeStatus= {props.changeStatus}
+          key={i}/>
+        ))
+      }
     </div>
   )
 }
